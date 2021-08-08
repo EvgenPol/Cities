@@ -12,7 +12,10 @@
 		6C65AF7926BED55E00EA6A4C /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C65AF7826BED55E00EA6A4C /* StartViewController.swift */; };
 		6C65AF7E26BED56200EA6A4C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6C65AF7D26BED56200EA6A4C /* Assets.xcassets */; };
 		6C65AF8126BED56200EA6A4C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C65AF7F26BED56200EA6A4C /* LaunchScreen.storyboard */; };
-		6C65AF8B26BED7DE00EA6A4C /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C65AF8A26BED7DE00EA6A4C /* NavigationViewController.swift */; };
+		6C65AF9926BF82CA00EA6A4C /* DetailedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C65AF9826BF82CA00EA6A4C /* DetailedViewController.swift */; };
+		6C65AF9C26BF84EE00EA6A4C /* CityViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C65AF9B26BF84EE00EA6A4C /* CityViewCell.swift */; };
+		6C65AF9F26BF850700EA6A4C /* HTTPCommunication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C65AF9E26BF850700EA6A4C /* HTTPCommunication.swift */; };
+		6C65AFA326BF96DF00EA6A4C /* CityData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C65AFA226BF96DF00EA6A4C /* CityData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,7 +26,10 @@
 		6C65AF7D26BED56200EA6A4C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6C65AF8026BED56200EA6A4C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6C65AF8226BED56200EA6A4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6C65AF8A26BED7DE00EA6A4C /* NavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
+		6C65AF9826BF82CA00EA6A4C /* DetailedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailedViewController.swift; sourceTree = "<group>"; };
+		6C65AF9B26BF84EE00EA6A4C /* CityViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityViewCell.swift; sourceTree = "<group>"; };
+		6C65AF9E26BF850700EA6A4C /* HTTPCommunication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPCommunication.swift; sourceTree = "<group>"; };
+		6C65AFA226BF96DF00EA6A4C /* CityData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CityData.swift; path = Model/CityData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +62,58 @@
 		6C65AF7326BED55E00EA6A4C /* Cities */ = {
 			isa = PBXGroup;
 			children = (
-				6C65AF7426BED55E00EA6A4C /* AppDelegate.swift */,
-				6C65AF7626BED55E00EA6A4C /* SceneDelegate.swift */,
-				6C65AF7826BED55E00EA6A4C /* StartViewController.swift */,
-				6C65AF8A26BED7DE00EA6A4C /* NavigationViewController.swift */,
-				6C65AF7D26BED56200EA6A4C /* Assets.xcassets */,
-				6C65AF7F26BED56200EA6A4C /* LaunchScreen.storyboard */,
+				6C65AF9626BF826600EA6A4C /* SupportingFiles */,
+				6C65AF9726BF829C00EA6A4C /* ViewControllers */,
+				6C65AF9A26BF84DB00EA6A4C /* View */,
+				6C65AFA126BF851F00EA6A4C /* Model */,
+				6C65AF9D26BF84F700EA6A4C /* Network */,
 				6C65AF8226BED56200EA6A4C /* Info.plist */,
 			);
 			path = Cities;
+			sourceTree = "<group>";
+		};
+		6C65AF9626BF826600EA6A4C /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				6C65AF7426BED55E00EA6A4C /* AppDelegate.swift */,
+				6C65AF7626BED55E00EA6A4C /* SceneDelegate.swift */,
+				6C65AF7D26BED56200EA6A4C /* Assets.xcassets */,
+				6C65AF7F26BED56200EA6A4C /* LaunchScreen.storyboard */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		6C65AF9726BF829C00EA6A4C /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				6C65AF7826BED55E00EA6A4C /* StartViewController.swift */,
+				6C65AF9826BF82CA00EA6A4C /* DetailedViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		6C65AF9A26BF84DB00EA6A4C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6C65AF9B26BF84EE00EA6A4C /* CityViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6C65AF9D26BF84F700EA6A4C /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				6C65AF9E26BF850700EA6A4C /* HTTPCommunication.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		6C65AFA126BF851F00EA6A4C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6C65AFA226BF96DF00EA6A4C /* CityData.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,8 +185,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6C65AF8B26BED7DE00EA6A4C /* NavigationViewController.swift in Sources */,
+				6C65AF9F26BF850700EA6A4C /* HTTPCommunication.swift in Sources */,
+				6C65AF9C26BF84EE00EA6A4C /* CityViewCell.swift in Sources */,
 				6C65AF7926BED55E00EA6A4C /* StartViewController.swift in Sources */,
+				6C65AF9926BF82CA00EA6A4C /* DetailedViewController.swift in Sources */,
+				6C65AFA326BF96DF00EA6A4C /* CityData.swift in Sources */,
 				6C65AF7526BED55E00EA6A4C /* AppDelegate.swift in Sources */,
 				6C65AF7726BED55E00EA6A4C /* SceneDelegate.swift in Sources */,
 			);
@@ -208,7 +260,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -263,7 +315,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
